@@ -301,6 +301,7 @@ def count_lines_and_map_languages(tar_stream):
                               f"Lines: {total_lines:,} ({member.name.split('/')[-1]} - {language})", end="\r")
                     except Exception as e:
                         print(f"\nSkipped {member.name} due to error: {e}")
+
     endtime = time.time()
     print(f"\nCounted {processed_files + ignored_files:,} files in {round(endtime - starttime, 2)} seconds.")
     print(f"{round(total_lines, 2) / round(endtime - starttime, 2)} lines/second")
